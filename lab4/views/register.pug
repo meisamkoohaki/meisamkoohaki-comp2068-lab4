@@ -1,4 +1,4 @@
-extends layout
+extends partials/layout
 
 block content
     h1 Register Page
@@ -12,3 +12,6 @@ block content
             input#username(type='password' name='password')
         div
             button(type='submit' value='register') Register
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer

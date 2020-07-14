@@ -1,6 +1,10 @@
-extends layout
+extends partials/layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    h1= message
+    h2= error.status
+    pre #{error.stack}
+
+
+    //-link to the footer.pug file in the partials folder in views
+    include partials/footer

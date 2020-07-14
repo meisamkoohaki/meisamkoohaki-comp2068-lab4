@@ -4,17 +4,17 @@ var router = express.Router();
 var passport = require('passport');
 var userModel = require('../models/user');
 var bcrypt = require('bcrypt');
-var user = require('../routes/users');
+//var userd = require('../routes/users');
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index', { user: req.user });
+    res.render('index');
 });
 
 /*POST for login*/
 //Try to login with passport
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/users/user',
     failureRedirect: '/login',
     failureMessage: 'Invalid Login'
 }));
@@ -43,7 +43,6 @@ router.post('/register', function (req, res) {
                     const newUser = new userModel(registerUser);
                     newUser.save(function (err) {
                         if (err) console.log(err);
-                        console.log("Trying to login");
                         console.log('registerUser: ' + registerUser.username + " " + registerUser.password)
                         req.login(newUser, function (err) {
                             if (err) console.log(err);

@@ -11,6 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var bcrypt = require('bcrypt');
 var session = require('express-session');
 var mongoose = require('mongoose');
+//var ejs = require('ejs');
 //const MongoClient = require('mongodb').MongoClient;
 //const client = new MongoClient(uri, { useNewUrlParser: true });
 const uri = "mongodb+srv://meisam:6465@cluster0-qjiac.mongodb.net/login";
@@ -40,6 +41,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+//app.set('view engine', 'ejs');
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -48,6 +51,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // required for passport session
 app.use(session({
