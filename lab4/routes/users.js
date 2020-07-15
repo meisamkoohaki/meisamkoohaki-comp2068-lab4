@@ -15,8 +15,8 @@ router.get('/user', function (req, res, next) {
         }
         if (req.isAuthenticated()) {
             console.log('9');
-            //res.json(users);
-            res.render("users");
+            res.json(users);
+            //res.render("users");
         } else {
             res.redirect('/login')
         }
