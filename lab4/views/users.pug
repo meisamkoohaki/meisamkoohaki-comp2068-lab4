@@ -2,6 +2,10 @@ block partials/layout
     div
         a(href='/logout') Logout
     h1 User Page
+    if user != null
+        p Hi there, #{user.username}!
+    else
+        p Hi there, unknown person!
 
 
 

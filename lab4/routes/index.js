@@ -44,10 +44,7 @@ router.post('/register', function (req, res) {
                     newUser.save(function (err) {
                         if (err) console.log(err);
                         console.log('registerUser: ' + registerUser.username + " " + registerUser.password)
-                        req.login(newUser, function (err) {
-                            if (err) console.log(err);
-                            return res.redirect('/login');
-                        });
+                        res.redirect('/login');
                     });
                 } else {
                     console.log('Username is already exist, please try again.');
