@@ -1,13 +1,10 @@
 block partials/layout
-    div
-        a(href='/logout') Logout
+    a(href='/logout') Logout
     h1 User Page
-    if user != null
-        p Hi there, #{user.username}!
-    else
-        p Hi there, unknown person!
-
-
+    br
+    h2 Welcome!
+    br
+    include partials/header.ejs
 
     //-link to the footer.pug file in the partials folder in views
     include partials/footer

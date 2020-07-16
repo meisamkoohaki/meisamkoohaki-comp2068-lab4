@@ -4,7 +4,7 @@ var router = express.Router();
 var passport = require('passport');
 var userModel = require('../models/user');
 var bcrypt = require('bcrypt');
-//var userd = require('../routes/users');
+
 
 /* GET home page. */
 router.get('/', function (req, res) {
