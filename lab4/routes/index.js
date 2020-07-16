@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
 });
 
 /*POST for login*/
-//Try to login with passport
+//Try to login with passport - redirect to user page
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/users/user',
     failureRedirect: '/login',

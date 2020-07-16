@@ -6,3 +6,36 @@ body {
 a {
     color: #00B7FF;
 }
+
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px black;
+}
+
+
+th, td {
+    padding: 15px;
+    background-color: #BA55D3;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #941b8f;
+}
+
+th {
+    background-color: #941b8f;
+}
+
+tbody tr:hover td {
+    background-color: #DA70D6;
+}
+
+tbody td {
+    position: relative;
+}

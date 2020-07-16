@@ -46,7 +46,7 @@
     <Content Include="views\partials\footer.pug">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\partials\header.ejs" />
+    <Content Include="views\partials\header.pug" />
     <Content Include="views\partials\layout.pug">
       <SubType>Code</SubType>
     </Content>

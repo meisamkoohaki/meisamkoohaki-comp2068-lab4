@@ -1,10 +1,21 @@
-block partials/layout
-    a(href='/logout') Logout
+extends partials/header
+
+block content
     h1 User Page
     br
     h2 Welcome!
     br
-    include partials/header.ejs
+
+    table
+        tr
+            th USERNAME
+            th PASSWORD
+   
+        each user in users
+            tr 
+                td= user.username
+                td= user.password
+               
 
     //-link to the footer.pug file in the partials folder in views
     include partials/footer

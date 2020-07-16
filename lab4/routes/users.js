@@ -11,13 +11,8 @@ router.get('/user', function (req, res, next) {
             next()
         }
         if (req.isAuthenticated()) {
-            //res.json(users);
-            
-            res.render("users", {
-                list: 'meisam'
-            });
-
-            //res.send("users", `<h3>Custom Property Value: ${'meisam'}`);
+            console.log(users);
+            res.render("users", { users: users });
 
         } else {
             res.redirect('/login')
