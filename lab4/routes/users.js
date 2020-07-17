@@ -12,7 +12,7 @@ router.get('/user', function (req, res, next) {
         }
         if (req.isAuthenticated()) {
             console.log(users);
-            res.render("https://meisamkoohaki-comp2068-lab4.herokuapp.com/users", { users: users });
+            res.render("users", { users: users });
 
         } else {
             res.redirect('/login')
